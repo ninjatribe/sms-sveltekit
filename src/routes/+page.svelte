@@ -4,6 +4,7 @@
 	import dateToString from '$lib/utils/dateHelper';
 	import { paginate, LightPaginationNav } from 'svelte-paginate';
 	import AddStudentForm from '$lib/components/forms/AddStudentForm.svelte';
+	import Sidebar from '/components/sidebar.svelte';
 
 	let search;
 	let items = [];
@@ -76,6 +77,8 @@
 	};
 </script>
 
+<Sidebar />
+
 <div class="container mt-12">
 	<div class="flex mb-4">
 		<button
@@ -94,6 +97,7 @@
 			placeholder="Search"
 		/>
 	</div>
+	
 	{#key paginatedItems}
 		{#if paginatedItems.length}
 			<table class="w-full text-lg text-left text-gray-500 dark:text-gray-400">
