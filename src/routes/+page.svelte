@@ -77,9 +77,10 @@
 	};
 </script>
 
-<Sidebar />
 
-<!--
+<Sidebar/>
+
+
 <div class="container mt-12">
 	<div class="flex mb-4">
 		<button
@@ -145,4 +146,3 @@
 {#if isModalOpen}
 	<AddStudentForm title={'Add Student'} bind:isModalOpen {loadStudent} />
 {/if}np
--->
