@@ -80,67 +80,68 @@
 
 <Sidebar/>
 
-
-<div class="container mt-12">
-	<div class="flex mb-4">
-		<button
-			type="button"
-			class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mx-2"
-			on:click={handleOpenModal}>Add</button
-		>
-		<button
-			class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2"
-			on:click={DownloadHandler}>Download</button
-		>
-		<input
-			type="search"
-			bind:value={search}
-			class="ms-auto w-auto form-input"
-			placeholder="Search"
-		/>
+<div class="p-4 sm:ml-64">
+	<div class="container mt-12">
+		<div class="flex mb-4">
+			<button
+				type="button"
+				class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mx-2"
+				on:click={handleOpenModal}>Add</button
+			>
+			<button
+				class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2"
+				on:click={DownloadHandler}>Download</button
+			>
+			<input
+				type="search"
+				bind:value={search}
+				class="ms-auto w-auto form-input"
+				placeholder="Search"
+			/>
 	</div>
 	
-	{#key paginatedItems}
-		{#if paginatedItems.length}
-			<table class="w-full text-lg text-left text-gray-500 dark:text-gray-400">
-				<thead
-					class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
-				>
-					<tr>
-						<th>Name</th>
-						<th>Birthday</th>
-						<th>Email</th>
-						<th>Gender</th>
-						<th>Mobile</th>
-						<th>Primary Language</th>
-						<th>Citizenship</th>
-					</tr>
-				</thead>
-				<tbody>
-					{#each paginatedItems as student}
-						<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-							<td>{student.completeName}</td>
-							<td>{dateToString(student.birthday)}</td>
-							<td>{student.email}</td>
-							<td>{student.gender}</td>
-							<td>{student.mobile}</td>
-							<td>{student.primarylanguage}</td>
-							<td>{student.citizenship}</td>
+		{#key paginatedItems}
+			{#if paginatedItems.length}
+				<table class="w-full text-lg text-left text-gray-500 dark:text-gray-400">
+					<thead
+						class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+					>
+						<tr>
+							<th>Name</th>
+							<th>Birthday</th>
+							<th>Email</th>
+							<th>Gender</th>
+							<th>Mobile</th>
+							<th>Primary Language</th>
+							<th>Citizenship</th>
 						</tr>
-					{/each}
-				</tbody>
-			</table>
-			<LightPaginationNav
-				totalItems={itemSize}
-				{pageSize}
-				,
-				{currentPage}
-				limit={1}
-				showStepOptions={true}
-				on:setPage={(e) => (currentPage = e.detail.page)}
-			/>
-		{/if}
-	{/key}
+					</thead>
+					<tbody>
+						{#each paginatedItems as student}
+							<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+								<td>{student.completeName}</td>
+								<td>{dateToString(student.birthday)}</td>
+								<td>{student.email}</td>
+								<td>{student.gender}</td>
+								<td>{student.mobile}</td>
+								<td>{student.primarylanguage}</td>
+								<td>{student.citizenship}</td>
+							</tr>
+						{/each}
+					</tbody>
+				</table>
+				<LightPaginationNav
+					totalItems={itemSize}
+					{pageSize}
+					,
+					{currentPage}
+					limit={1}
+					showStepOptions={true}
+					on:setPage={(e) => (currentPage = e.detail.page)}
+				/>
+			{/if}
+		{/key}
+	</div>
 </div>
 
 {#if isModalOpen}
