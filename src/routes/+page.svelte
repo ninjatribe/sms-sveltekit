@@ -6,6 +6,7 @@
 	import AddStudentForm from '$lib/components/forms/AddStudentForm.svelte';
 	import Navbar from '../lib/components/forms/Navbar.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
+	// import input from '$lib\components\reusable\input.svelte';
 
 	let search;
 	let items = [];
@@ -147,6 +148,10 @@
 		{/key}
 	</div>
 </div>
+
+<!-- {#if input}
+	<input/>
+{/if} -->
 
 {#if isModalOpen}
 	<AddStudentForm title={'Add Student'} bind:isModalOpen {loadStudent} />
