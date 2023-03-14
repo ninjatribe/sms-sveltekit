@@ -1,6 +1,7 @@
 <script>
     import headerImg from "$lib/images/header.jpg"
     import Navbar from "$lib/components/forms/Navbar.svelte";
+    import Footer from "$lib/components/Footer.svelte";
     import arrowRight from "$lib/images/arrow_right.svg";
     import mailImg from "$lib/images/mail.svg";
 	import { onMount } from "svelte/internal";
@@ -181,3 +182,4 @@
     </div>
 
 </div>
+<Footer></Footer>
