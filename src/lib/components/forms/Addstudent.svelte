@@ -1,6 +1,9 @@
 <script>
     let special ='', currently = '';
-    export let title;
+    /**
+	 * @type {any}
+	 */
+     export let title;
     export let isModalOpen = false;
 
     const handleClose = () => {
