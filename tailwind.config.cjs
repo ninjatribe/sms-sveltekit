@@ -47,6 +47,9 @@ module.exports = {
 			},
 			animation: {
 				gallop: 'rightToLeft 1.5s linear'
+			},
+			fontFamily: {
+				kaushan : ['Kaushan Script', "cursive"],
 			}
 		},
 		backgroundImage: {
