@@ -4,6 +4,7 @@
 	import dateToString from '$lib/utils/dateHelper';
 	import { paginate, LightPaginationNav } from 'svelte-paginate';
 	import AddStudentForm from '$lib/components/forms/AddStudentForm.svelte';
+	import Button from '$lib/components/reusable/Button.svelte';
 	import Navbar from '../lib/components/forms/Navbar.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import TextField from '$lib/components/reusable/TextField.svelte';
@@ -151,6 +152,10 @@
 	{#if TextField}
 		<TextField/>
 	{/if}
+
+{#if Button}
+	<Button/>
+{/if}
 
 {#if isModalOpen}
 	<AddStudentForm title={'Add Student'} bind:isModalOpen {loadStudent} />
