@@ -79,10 +79,8 @@
 		isModalOpen = true;
 	};
 </script>
-<Navbar />
-<Sidebar/>
 
-<div class="p-4 sm:ml-64">
+<div class="p-4">
 	<div class="container mt-12">
 		<div class="flex mb-4">
 			<button
