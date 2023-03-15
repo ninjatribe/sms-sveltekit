@@ -1,4 +1,66 @@
-<section class="gradient-form h-full bg-neutral-200 dark:bg-neutral-700 h-screen">
+<script>
+	// @ts-nocheck
+	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
+	import { SHA256 } from 'crypto-js';
+	
+	export let data;
+	const {user} = data;
+
+	let email = '';
+	let password = '';
+	let error = '';
+	let loggingIn = false;
+	let hasAccess = false;
+	$: {
+		if (user) {
+			hasAccess = true;
+		} else {
+			setTimeout(() => {
+				hasAccess = false;
+			}, 500);
+			goto('/auth/login')
+		}
+	}
+
+	const handleLogin = async () => {
+		const securePassword = await SHA256(password).toString();
+		const response = await fetch('/api/auth/login', {
+			method: 'POST',
+			headers: {
+				'content-type': 'application/json',
+			},
+			body: JSON.stringify({ email, password: securePassword}),
+		});
+		const data = await response.json();
+
+		if(data.error) {
+			error = data.errorMessage || 'An error occured';
+			loggingIn = false;
+		} else {
+			page.subscribe((value) => {
+				value.data.user = {
+					_id: data.user._id,
+					profile: {
+						email: data.user.profile.email,
+						firstName: data.user.profile.firstName,
+						lastName: data.user.profile.lastName,
+						phone: data.user.profile.phone,
+						photo: data.user.profile.photo,
+						country: data.user.profile.country,
+						province: data.user.profile.province,
+						displayName: data.user.profile.displayName,
+					},
+					email: data.user.profile.email,
+				};
+			});
+			goto('/dashboard')
+		}
+	}
+
+</script>
+
+<section class="gradient-form bg-neutral-200 dark:bg-neutral-700 h-screen">
 	<div class="container h-full p-10">
 	  <div
 		class="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
@@ -17,28 +79,37 @@
 					  src="https://faith.edu.ph/wp-content/uploads/2020/11/faith-academy-logo.svg"
 					  alt="logo" />
 				  </div>
-				  <form>
+				  <form method="POST" autocomplete="off"
+				  on:submit={(e) => {
+					  e.preventDefault();
+					  if(!loggingIn) {
+						  loggingIn = true;
+						  handleLogin();
+					  }
+				  }}>
 					<p class="mb-4">Please login to your account</p>
 					<div class="relative mb-4" data-te-input-wrapper-init>
 					  <input
-						type="text"
+						type="email"
 						class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-						id="exampleFormControlInput1"
-						placeholder="Username" />
+						id="email"
+						bind:value={email}
+						placeholder="Email" />
 					  <label
-						for="exampleFormControlInput1"
+						for="email"
 						class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-blue-600 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
-						>Username
+						>Email
 					  </label>
 					</div>
 					<div class="relative mb-4" data-te-input-wrapper-init>
 					  <input
 						type="password"
 						class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-						id="exampleFormControlInput11"
+						id="password"
+						bind:value={password}
 						placeholder="Password" />
 					  <label
-						for="exampleFormControlInput11"
+						for="password"
 						class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-blue-600 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
 						>Password
 					  </label>
@@ -46,7 +117,7 @@
 					<div class="mb-12 pt-1 pb-1 text-center">
 					  <button
 						class="mb-3 inline-block w-full rounded px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"
-						type="button"
+						type="submit"
 						data-te-ripple-init
 						data-te-ripple-color="light"
 						style="
