@@ -1,11 +1,11 @@
 <script>
     // @ts-nocheck
-	import Navbar from "$lib/components/forms/Navbar.svelte";
-    import Sidebar from "$lib/components/Sidebar.svelte";
+	import Navbar from "$lib/components/dashboard/Navbar.svelte";
+    import Sidebar from "$lib/components/dashboard/Sidebar.svelte";
 
     let showDescriptions = true
 </script>
-<div class="sm:h-screen flex flex-col sm:flex-row">
+<div class="flex flex-col">
     <div class="animation duration-300 truncate h-full p-0 sm:p-1 hidden sm:inline {showDescriptions ?  'w-1/2' : 'w-48'}">
         <Sidebar bind:showDescriptions={showDescriptions} />
     </div>
