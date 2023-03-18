@@ -4,8 +4,10 @@
 	import dateToString from '$lib/utils/dateHelper';
 	import { paginate, LightPaginationNav } from 'svelte-paginate';
 	import AddStudentForm from '$lib/components/forms/AddStudentForm.svelte';
+	import Button from '$lib/components/reusable/Button.svelte';
 	import Navbar from '../lib/components/forms/Navbar.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
+	import TextField from '$lib/components/reusable/TextField.svelte';
 
 	let search;
 	let items = [];
@@ -77,10 +79,8 @@
 		isModalOpen = true;
 	};
 </script>
-<Navbar />
-<Sidebar/>
 
-<div class="p-4 sm:ml-64">
+<div class="p-4">
 	<div class="container mt-12">
 		<div class="flex mb-4">
 			<button
@@ -147,7 +147,14 @@
 		{/key}
 	</div>
 </div>
+	{#if TextField}
+		<TextField/>
+	{/if}
+
+{#if Button}
+	<Button/>
+{/if}
 
 {#if isModalOpen}
 	<AddStudentForm title={'Add Student'} bind:isModalOpen {loadStudent} />
-{/if}np
+{/if}
