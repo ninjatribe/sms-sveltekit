@@ -8,6 +8,7 @@
 	import Navbar from '../lib/components/forms/Navbar.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import TextField from '$lib/components/reusable/TextField.svelte';
+	import Card from '$lib/components/reusable/Card.svelte';
 
 	let search;
 	let items = [];
@@ -103,7 +104,9 @@
 				placeholder="Search"
 			/>
 	</div>
-	
+		<Card title="FARS Project" link="/"> 
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate pariatur harum illo ex alias laborum ducimus quo quibusdam fuga amet?.
+			</Card>
 		{#key paginatedItems}
 			{#if paginatedItems.length}
 				<table class="w-full text-lg text-left text-gray-500 dark:text-gray-400">
