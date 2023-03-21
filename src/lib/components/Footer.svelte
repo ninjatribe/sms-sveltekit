@@ -21,11 +21,11 @@
             <p>Penny Lane Street, Valley Golf Subdivision</p>
             <p>San Juan, Cainta, Rizal 1900 Philippines</p>
             <p>+63 2-8651-7100 | vanguard@faith.edu.ph</p>
-            <div class="flex justify-center gap-2 w-1/2 mt-2 p-2 border-black border-t-2">
-                <a href="https://www.facebook.com/faithacademymanila/" target="_blank" rel="noreferrer" class="w-20"><img src={facebook_logo} alt="" class=""></a>
-                <a href="https://www.instagram.com/faithacademymanila/" target="_blank" rel="noreferrer" class="w-20"><img src={instagram_logo} alt="" class=""></a>
-                <a href="https://vimeo.com/faithacademymanila" target="_blank" rel="noreferrer" class="w-20"><img src={vimeo_logo} alt="" class=""></a>
-                <a href="https://www.youtube.com/c/FaithAcademyManilaOfficial" target="_blank" rel="noreferrer" class="w-20"><img src={youtube_logo} alt="" class=""></a>
+            <div class="flex justify-center gap-2 w-1/2 mt-2 p-2 border-black border-t-2 overflow-hidden">
+                <a href="https://www.facebook.com/faithacademymanila/" target="_blank" rel="noreferrer" class="w-20"><img src={facebook_logo} alt="" class="transition duration-300 ease-in-out hover:rotate-12"></a>
+                <a href="https://www.instagram.com/faithacademymanila/" target="_blank" rel="noreferrer" class="w-20"><img src={instagram_logo} alt="" class="transition duration-300 ease-in-out hover:rotate-12"></a>
+                <a href="https://vimeo.com/faithacademymanila" target="_blank" rel="noreferrer" class="w-20"><img src={vimeo_logo} alt="" class="transition duration-300 ease-in-out hover:rotate-12"></a>
+                <a href="https://www.youtube.com/c/FaithAcademyManilaOfficial" target="_blank" rel="noreferrer" class="w-20"><img src={youtube_logo} alt="" class="transition duration-300 ease-in-out hover:rotate-12"></a>
             </div>
         </div>
     </div>
