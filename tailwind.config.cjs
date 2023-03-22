@@ -52,6 +52,7 @@ module.exports = {
 			},
 			fontFamily: {
 				kaushan : ['Kaushan Script', "cursive"],
+				quicksand: ['Quicksand', 'sans-serif'],
 			}
 		},
 		backgroundImage: {
