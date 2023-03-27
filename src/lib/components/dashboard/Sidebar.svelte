@@ -5,7 +5,7 @@
 
 <aside
 	id="logo-sidebar"
-	class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+	class=" z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
 	aria-label="Sidebar"
 >
 	{#if HyperLink}
@@ -22,6 +22,11 @@
 		<HyperLink
 			href="#"
 			buttonName="Users"
+			img="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+		/>
+		<HyperLink
+			href="#"
+			buttonName="Gender"
 			img="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
 		/>
 		<HyperLink
