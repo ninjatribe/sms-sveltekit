@@ -2,19 +2,56 @@
     import {page} from '$app/stores';
 
     export let isAccountProfileOpen = false;
+    export let data;
+
     
     function toggleProfileForm(){
         isAccountProfileOpen = !isAccountProfileOpen;
     };
     let profile = $page.data.user.profile;
-
+    
+    const settings  = data;
+    let firstName = settings?.firstName;
+	let lastName = settings?.lastName;
+	let province = settings?.province;
+    let phone = settings?.phone;
+    let email = settings?.email;
+    let country = settings?.country;
+    let message;
   </script>
 
 <div class="fixed inset-0 z-1 overflow-y-auto">
     <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
         <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-2 sm:w-full sm:max-w-lg">
             <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <form class="w-full max-w-lg">
+                <form 
+                class="w-full max-w-lg"
+                on:submit|preventDefault={async () => {
+                    try {
+                        let response = await fetch('/api/admin/update', {
+                            method: 'POST',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                profile: profile,
+                                firstName: firstName,
+                                lastName: lastName,
+                                province: province,
+                                phone: phone,
+                                email: email,
+                                country: country,
+                            
+                            })
+                        });
+        
+                        let result = await response.json();
+                        message = result.message;
+                    } catch (error) {
+                        console.error('error', error);
+                    }
+                }}
+                >
                     <div class="flex w-full justify-center items-center px-3">
                         <img class="h-auto md:w-1/3 rounded-full outline outline-1 w-96" src="{profile.photo.url}" alt="">
                     </div>
@@ -97,14 +134,14 @@
                         >
                         </div>
                     </div>
+                    <button 
+                        type="submit" 
+                        class="inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto"
+                        >Update
+                    </button>
                 </form>
             </div>
             <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                <button 
-                    type="button" 
-                    class="inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto"
-                    >Update
-                </button>
                 <button 
                     type="button" 
                     class="inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto"
