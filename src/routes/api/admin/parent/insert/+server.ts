@@ -5,7 +5,7 @@ import clientPromise from '$lib/server/mongo';
 export async function POST({request, locals}: any) {
     const data = await request.json();
     const db = await clientPromise();
-    const Student = db.collection('parents_info');
+    const Student = db.collection('applicants');
     data._id = id();
     
     const response = await Student.insertOne(data);
