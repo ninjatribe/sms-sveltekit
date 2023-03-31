@@ -52,6 +52,8 @@ module.exports = {
 			},
 			fontFamily: {
 				kaushan : ['Kaushan Script', "cursive"],
+				bebas : ['Bebas Neue', "cursive"],
+				racing : ['Racing Sans One', "cursive"],
 			}
 		},
 		backgroundImage: {
