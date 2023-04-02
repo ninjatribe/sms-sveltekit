@@ -1,9 +1,10 @@
 <script>
     // @ts-nocheck
-    export let buttonName, href,img;
+    export let buttonName, href,img, clickEvent;
 </script>
 
-<div class="h-10 bg-white dark:bg-gray-800">
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class="h-10 bg-white dark:bg-gray-800" on:click={clickEvent}>
     <ul class="space-y-2">
        <li>
           <a href={href} class="flex items-center p-2 text-base font-semibold text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" style="text-decoration-line: none;">
