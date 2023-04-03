@@ -30,10 +30,10 @@ async function connectToDatabase() {
 	const client = await MongoClient.connect(uri, options);
 
 	const currentDb = uri?.includes('Staging')
-		? 'hrStaging'
+		? 'faStaging'
 		: uri?.includes('Test')
-		? 'hrStagingTest'
-		: 'hrStaging';
+		? 'faStagingTest'
+		: 'faStaging';
 
 	const db = await client.db(currentDb);
 	cachedDb = db;
