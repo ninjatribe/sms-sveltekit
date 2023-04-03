@@ -1,4 +1,5 @@
 <script>
+    // @ts-nocheck 
     import acsi from '$lib/images/acsi_accredited.png'
     import best from '$lib/images/christian_workplace.png'
     import faith_logo from '$lib/images/faith_academy_logo_white.png'
