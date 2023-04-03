@@ -129,35 +129,35 @@
             </div>
         </div>
         <div class="animated second flex flex-col items-center lg:items-start w-full translate-x-20 opacity-0 cursor-default">
-            <div class="uppercase font-bold text-4xl text-white -translate-x-4 lg:-translate-x-24">
+            <div class="uppercase font-bold text-4xl sm:text-5xl text-white -translate-x-4 lg:-translate-x-24">
                 <p class="bg-blue-900 p-1">Welcome to</p>
                 <p class="bg-blue-900 p-2 translate-x-10">faith academy</p>
             </div>
-            <p class="w-96 text-blue-900 mt-2">Faith Academy is recognized as an international leader in providing a well-rounded educational experience for third-culture kids, located just outside Manila, Philippines.</p>
+            <p class="w-96 text-blue-900 mt-2 text-xl">Faith Academy is recognized as an international leader in providing a well-rounded educational experience for third-culture kids, located just outside Manila, Philippines.</p>
             <br>
             <a href="/about">
-                <p class= "text-yellow-400">LEARN MORE ABOUT US ></p>
+                <p class= "text-blue-400 hover:text-blue-600 transition-all duration-400 ease-in">LEARN MORE ABOUT US ></p>
             </a>
         </div>
     </div>
 
     <!-- Mission -->
-    <div class="bg-yellow-300 py-20 cursor-default">
+    <div class="bg-blue-200 py-20 cursor-default">
         <div class="animated fourth flex flex-col lg:flex-row items-center justify-center opacity-0 -translate-y-20">
             <p class="font-kaushan text-end p-5 lg:pl-52 text-5xl text-blue-900 font-bold">Mission</p>
-            <p class="w-96 font-sans text-lg px-4 lg:p-0 text-slate-800 font-semibold">Forming Christlike, lifelong learners through a dynamic, relevant education, especially for the children of missionaries.</p>
+            <p class="w-96 font-sans text-xl px-4 lg:p-0 text-slate-700 font-semibold">Forming Christlike, lifelong learners through a dynamic, relevant education, especially for the children of missionaries.</p>
         </div>
     </div>
 
     <!-- Embedded video -->
-    <div class="py-20 flex justify-center flex-col lg:flex-row items-center gap-6 cursor-default">
+    <div class="py-24 flex justify-center flex-col lg:flex-row items-center gap-6 cursor-default">
         <div class="lg:order-2 border-4 border-green-600 grow-0">
             <iframe class="-translate-x-4 translate-y-4" bind:this={embeddedVideo} src="https://player.vimeo.com/video/219770193?h=7fccb28631&color=9fc1e6" width="256" height="144" frameborder="0" allow="fullscreen; picture-in-picture;" allowfullscreen title="Cultivating Hearts and Minds for Christ at Faith Academy"></iframe>
         </div>
         <div class="animated third w-96 lg:order-1 flex flex-col items-end font-quicksand font-semibold text-lg -translate-x-20 opacity-0">
             <p class="text-end text-blue-900">“Faith Academy has been a place that’s pushed me to perform to the best of my abilities while still remaining a community that nurtures and guides me through my walk with God.”</p>
             <br>
-            <p class="text-yellow-400">- HIGH SCHOOL STUDENT</p>
+            <p class="text-blue-400 text-xl">- HIGH SCHOOL STUDENT</p>
         </div>
     </div>
 
@@ -187,7 +187,7 @@
     </div>
 
     <!-- Learn more -->
-    <div class="bg-blue-900 p-2 py-20">
+    <div class="bg-blue-900 p-2 py-20 text-lg">
         <div class="animated fifth flex flex-col lg:flex-row justify-center items-center gap-4 text-white opacity-0 -translate-y-20">
             <p class="text-center cursor-default"><b>Learn more</b> about our admission process, <b>register</b> your student, or <b>apply</b> here!</p>
             <a href="/apply" class="py-2 px-6 bg-blue-400 text-xl text-slate-100 hover:bg-yellow-300 hover:text-slate-600 transition-all duration-300 ease-in-out">Register</a>

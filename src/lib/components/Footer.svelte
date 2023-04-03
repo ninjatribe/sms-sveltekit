@@ -15,7 +15,7 @@
     <div class="flex flex-col items-center w-full lg:w-1/2 p-2 ">
         <div class="flex items-center justify-start gap-3 p-1">
             <img src={faith_logo} alt="" class="w-28 lg:w-40">
-            <p class="w-60 font-bold text-yellow-300">Forming christlike, lifelong learners through a dynamic, relevant education, especially for the children of missionaries.</p>
+            <p class="w-60 font-bold text-white">Forming christlike, lifelong learners through a dynamic, relevant education, especially for the children of missionaries.</p>
         </div>
         <br>
         <div class="flex flex-col justify-center items-center border-black border-t-2 p-2 text-white">

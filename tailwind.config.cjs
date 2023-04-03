@@ -52,12 +52,9 @@ module.exports = {
 			},
 			fontFamily: {
 				kaushan : ['Kaushan Script', "cursive"],
-<<<<<<< HEAD
+				quicksand: ['Quicksand', 'sans-serif'],
 				bebas : ['Bebas Neue', "cursive"],
 				racing : ['Racing Sans One', "cursive"],
-=======
-				quicksand: ['Quicksand', 'sans-serif'],
->>>>>>> 45c7a7425571f105811e03ef1303631c1a47eeb6
 			}
 		},
 		backgroundImage: {
