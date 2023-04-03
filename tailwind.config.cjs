@@ -18,9 +18,11 @@ module.exports = {
 					'amber-500': '#F59E0B'
 				},
 				custom: {
+					lightGreen: '#81E7B2',
 					green: '#62D0AD',
 					red: '#F32F2F',
-					blue: '#2E8ACF',
+					blue: '#4895EA',
+					darkBlue: '#1937B8',
 					orange: '#FF6C36',
 					pink: '#FF418B',
 					brown: '#B26500',
@@ -47,6 +49,15 @@ module.exports = {
 			},
 			animation: {
 				gallop: 'rightToLeft 1.5s linear'
+			},
+			fontFamily: {
+				kaushan : ['Kaushan Script', "cursive"],
+<<<<<<< HEAD
+				bebas : ['Bebas Neue', "cursive"],
+				racing : ['Racing Sans One', "cursive"],
+=======
+				quicksand: ['Quicksand', 'sans-serif'],
+>>>>>>> 45c7a7425571f105811e03ef1303631c1a47eeb6
 			}
 		},
 		backgroundImage: {
