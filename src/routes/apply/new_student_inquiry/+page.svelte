@@ -156,7 +156,6 @@
                     <th>Name</th>
                     <th>Grade Level of Interest</th>
                     <th>Enrollment School Year</th>
-                    <th>Action</th>
             </thead>
             <tbody>
                 {#each $studentsArray as student}
