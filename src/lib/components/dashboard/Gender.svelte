@@ -110,7 +110,7 @@
     })
 </script>
 
-<div class="relative w-full h-full bg-blue-500">
+<div class="h-full w-full">
     <div class="flex p-2 w-ful">
         <button class="border-2 rounded-lg p-2 w-10" on:click={() => {showInsertGenderModal = !showInsertGenderModal}}><img src={newDocument} alt="new_document"></button>
         <div class="flex items-center gap-1">
