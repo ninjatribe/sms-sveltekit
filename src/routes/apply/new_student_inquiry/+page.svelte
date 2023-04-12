@@ -6,7 +6,7 @@
     import AddStudent from "$lib/components/forms/AddStudent.svelte";
     import { studentsArray } from './data-store.js';
 
-    
+    let pending = 'Pending';
     let firstName = '', lastName = '', email = '', gender = '', martial_status = '', family_role = '', apply = '', missionary = '', inform = '', ads = '', missionary_message = '', apply_message = '';
 	let isModalOpen = false;
 
@@ -35,6 +35,7 @@
           missionary_message,
           inform,
           ads,
+          pending,
           $studentsArray,
         })
       });

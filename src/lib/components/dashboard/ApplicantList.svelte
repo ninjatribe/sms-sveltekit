@@ -1,9 +1,11 @@
 <script>
-    // @ts-nocheck
-
+// @ts-nocheck
     import { onMount } from "svelte";
     import { paginate, LightPaginationNav } from 'svelte-paginate'
     import { slide } from 'svelte/transition'
+	import EditApplicantList from "../forms/EditApplicantList.svelte";
+
+    export let showEditApplicantModal = false;
 
     // Variables
     let items = [];
@@ -12,6 +14,16 @@
     let itemSize;
     let paginatedItems = [];
     let currentPage = 1;
+
+    let editId;
+    let editMartialStatus;
+    let editFamilyRole;
+    let editPending;
+    let completeName;
+    let email;
+    let inform;
+    let ads;
+    
     
     async function loadApplicants() {
         try {
@@ -51,7 +63,10 @@
         ? items.filter((applicant) => {
             return (
                 applicant.firstName.match(RegExp(search, 'gi')) ||
-				applicant.lastName.match(RegExp(search, 'gi'))
+				applicant.lastName.match(RegExp(search, 'gi')) ||
+                applicant.email.match(RegExp(search, 'gi')) ||
+                applicant.martial_status.match(RegExp(search, 'gi')) ||
+                applicant.family_role.match(RegExp(search, 'gi'))
                 );
             })
             : items;
@@ -83,9 +98,10 @@
     <div>
         <table class="border-2 border-black bg-gray-100 w-full">
             <colgroup>
-                <col width="25%">
-                <col width="25%">
-                <col width="25%">
+                <col width="20%">
+                <col width="20%">
+                <col width="20%">
+                <col width="15%">
                 <col width="25%">
             </colgroup>
             <thead class="bg-gray-300 text-xl">
@@ -93,6 +109,7 @@
                     <th class="text-start">Applicant Details</th>
                     <th class="text-start">Status/Role</th>
                     <th class="text-start">Children/s</th>
+                    <th class="text-start">Status</th>
                     <th class="text-start">Action</th>
                 </tr>
             </thead>
@@ -121,8 +138,18 @@
                                 </ul>
                                 {/if}
                             </td>
+                            <td>
+                                {#if item.pending === "Pending"}
+                                <span class="bg-yellow-500 text-black text-xl font-medium mr-2 px-2 py-2 rounded">Pending</span>
+                                {:else if item.pending === "Approve"}
+                                <span class="bg-green-500 text-white text-xl font-medium mr-2 px-2 py-2 rounded">Approved</span>
+                                {:else if item.pending === "Declined"}
+                                <span class="bg-red-500 text-white text-xl font-medium mr-2 px-2 py-2 rounded">Declined</span>
+                                {/if}
+                            </td>
                             <td class="w-min">
-                                <button class="text-white bg-yellow-400 hover:bg-yellow-500 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2" on:click={clickHandler}>Show Children/s</button>
+                                <button class="text-white bg-green-500 hover:bg-green-500 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2" on:click={(e) => {showEditApplicantModal = !showEditApplicantModal; editId = item._id; editMartialStatus = item.martial_status; editFamilyRole = item.family_role; editPending = item.pending; completeName = item.completeName; email = item.email; inform = item.inform; ads = item.ads}}>Edit</button>
+                                <button class="text-white bg-yellow-500 hover:bg-yellow-500 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2" on:click={clickHandler}>Show</button>
                                 <button class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2" on:click={() => {deleteApplicant(item._id)}}>Delete</button>
                             </td>
                         </tr>
@@ -140,4 +167,5 @@
         on:setPage={(e) => (currentPage = e.detail.page)}
         />
     </div>
+    <EditApplicantList bind:showEditApplicantModal bind:editId bind:editMartialStatus bind:editFamilyRole bind:editPending bind:completeName bind:email bind:inform bind:ads {loadApplicants}/>
 </div>
