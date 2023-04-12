@@ -65,8 +65,8 @@
                 <label for="gender" class="block mb-2 font-bold text-blue-900">Gender:</label>
                 <select id="gender" name="gender" bind:value="{gender}" class="w-full px-4 py-2 text-gray-700 bg-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100" required>
                     <option value="" disabled selected>Select an option</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
                   </select>
             </div>
         </div>
@@ -79,20 +79,20 @@
             <label for="martial" class="block mb-2 font-bold text-blue-900">Martial Status:</label>
             <select id="martial" name="martial" bind:value={martial_status} class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100" required>
                 <option value="" disabled selected>Please Choose</option>
-                <option value="single">Single</option>
-                <option value="married">Married</option>
-                <option value="seperated">Seperated</option>
-                <option value="divorced">Divorced</option>
-                <option value="widowed">Widowed</option>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Seperated">Seperated</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Widowed">Widowed</option>
             </select>
           </div>
           <div class="mb-4">
             <label for="family" class="block mb-2 font-bold text-blue-900">Family role:</label>
             <select id="family" name="family" bind:value={family_role} class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100" required>
                 <option value="" disabled selected>Please Choose</option>
-                <option value="father">Father/Legal Guardian</option>
-                <option value="mother">Mother/Legal Guardian</option>
-                <option value="guardian">Guardian</option>
+                <option value="Father">Father/Legal Guardian</option>
+                <option value="Mother">Mother/Legal Guardian</option>
+                <option value="Guardian">Guardian</option>
             </select>
           </div>
         </div>
