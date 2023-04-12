@@ -76,8 +76,8 @@
                     <label for="gender" class="block mb-2 font-bold text-blue-900">Gender:</label>
                     <select id="gender" name="gender" bind:value="{student_gender}" class="w-full px-4 py-2 text-gray-700 bg-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100" required>
                         <option value="" disabled selected>Select an option</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
                       </select>
                   </div>
                     <div class="mb-4">
