@@ -6,7 +6,7 @@
     const profile = $page.data.user.profile;  
     const fullName = profile.displayName;
     const imgsrc = profile.photo.url;
-    
+
     let isAccountProfileOpen = false;
     let isDropdownOpen = false;
     let isLogout = false; 
@@ -78,5 +78,5 @@
     </div>
   </nav>
   {#if isAccountProfileOpen}
-    <AccountProfile bind:isAccountProfileOpen/>
+    <AccountProfile data={profile} bind:isAccountProfileOpen/>
   {/if}
