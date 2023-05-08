@@ -22,7 +22,7 @@
     };
     
     const updateApplicant = async() => {
-        const response = await fetch('/api/admin/parent/update', {
+        const response = await fetch('/api/admin/applicant/update', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

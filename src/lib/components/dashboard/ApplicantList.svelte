@@ -27,7 +27,7 @@
     
     async function loadApplicants() {
         try {
-            let response = await fetch('/api/admin/parent', {
+            let response = await fetch('/api/admin/applicant', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -41,7 +41,7 @@
     }
         
     const deleteApplicant = async(id) => {
-        const response = await fetch('/api/admin/parent/delete', {
+        const response = await fetch('/api/admin/applicant/delete', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
