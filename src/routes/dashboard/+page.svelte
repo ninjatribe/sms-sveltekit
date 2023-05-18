@@ -6,6 +6,7 @@
 	import Dashboard from "$lib/components/dashboard/Dashboard.svelte";
 	import Gender from "$lib/components/dashboard/Gender.svelte";
 	import SampleComponent from "$lib/components/dashboard/SampleComponent.svelte";
+    import StudentList from "$lib/components/dashboard/StudentList.svelte";
 	// import Records from "$lib/components/dashboard/Records.svelte";
 
     let showDescriptions = true
@@ -23,6 +24,8 @@
                 <Dashboard/>
             {:else if toDisplay == 'gender'} 
                 <Gender/>
+            {:else if toDisplay == 'studentlist'}
+                <StudentList/>
             {:else if toDisplay == 'sample'} 
                 <SampleComponent/> 
             <!-- {:else if toDisplay == 'otherComponents'}  -->
