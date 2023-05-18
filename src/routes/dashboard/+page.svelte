@@ -10,6 +10,7 @@
 	import Gender from "$lib/components/dashboard/Gender.svelte";
 	import SampleComponent from "$lib/components/dashboard/SampleComponent.svelte";
     import ApplicantList from "$lib/components/dashboard/ApplicantList.svelte";
+    import Schoolmodule from "$lib/components/dashboard/Schoolmodule.svelte";
 	// import Records from "$lib/components/dashboard/Records.svelte";
 
     let showDescriptions = true
@@ -31,6 +32,8 @@
                 <ApplicantList/>
             {:else if toDisplay == 'sample'} 
                 <SampleComponent/> 
+            {:else if toDisplay == 'schoolmodule'}
+                <Schoolmodule/>
             <!-- {:else if toDisplay == 'otherComponents'}  -->
             <!-- To add another component in sidebar, go to /lib/components/dashboard/Sidebar.svelte and add. -->
             {/if}
