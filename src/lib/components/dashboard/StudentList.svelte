@@ -67,8 +67,8 @@
             paginatedItems = search
                 ? items.filter((students) => {
                         return (
-                            students.students.match(RegExp(search, 'gi')) ||
-                            students.students.match(RegExp(search, 'gi'))
+                            students.students_firstname.match(RegExp(search, 'gi')) ||
+                            students.students_lastname.match(RegExp(search, 'gi'))
                         );
                   })
                 : items;
@@ -121,7 +121,7 @@
                                     <td>{item.birth_date}</td>
                                     <td class="w-min">
 
-                                        <button class="text-center p-1 w-min my-2 bg-green-300 rounded-md" on:click={(e) => {showEditStudentModal = !showEditStudentModal; editId = item._id; editFirstName = item.student_firstname; editLastName = item.student_lastname; editGrade = item.student_gender; editSchoolYear = item.student_school_year}}>Edit</button>
+                                        <button class="text-center p-1 w-min my-2 bg-green-300 rounded-md" on:click={(e) => {showEditStudentModal = !showEditStudentModal; editId = item._id; editFirstName = item.student_firstname; editLastName = item.student_lastname; editGrade = item.current_grade; editSchoolYear = item.school_year}}>Edit</button>
                                         <button class="text-center p-1 w-min my-2 bg-red-300 rounded-md" on:click={() => {deleteStudent(item._id)}}>Delete</button>
                                     </td    >
                                 </tr>

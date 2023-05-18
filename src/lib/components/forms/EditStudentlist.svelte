@@ -27,10 +27,10 @@
                 },
                 body: JSON.stringify({
                     _id: editId,
-                    firstName: newFirstName,
-                    lastName: newLastName,
-                    grade: newGrade,
-                    schoolYear: newSchoolYear
+                    student_firstname: newFirstName,
+                    student_lastname: newLastName,
+                    current_grade: newGrade,
+                    school_year: newSchoolYear
                 })
             });
             let result = await response.json();
@@ -50,7 +50,7 @@
     <!-- Boilerplate modal for dashboard or anything that has relative parent -->
     <div class="w-full h-full flex justify-center items-center absolute top-0 z-50 {showEditStudentModal ? "block" : "hidden"}">
         <!-- "Main" div -->
-        <div class="flex flex-col justify-around items-center w-72 h-60 bg-slate-300">
+        <div class="flex flex-col justify-around items-center w-72 h-100 bg-slate-300">
             <div>
                 <p class="text-xl bold">Edit Students List</p>
                 <p>{editId}</p>
