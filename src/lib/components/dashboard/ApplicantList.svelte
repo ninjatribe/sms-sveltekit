@@ -96,7 +96,7 @@
     </div>  
     <p class="text-3xl font-black p-4">Applicants</p>
     <div>
-        <table class="border-2 border-black bg-gray-100 w-full">
+        <table class="border-2 border-black bg-white w-full">
             <colgroup>
                 <col width="20%">
                 <col width="20%">
@@ -104,8 +104,8 @@
                 <col width="15%">
                 <col width="25%">
             </colgroup>
-            <thead class="bg-gray-300 text-xl">
-                <tr class="bg-gray-300">
+            <thead class="bg-gray-300 text-md   uppercase">
+                <tr class="bg-black text-white py-2">
                     <th class="text-start">Applicant Details</th>
                     <th class="text-start">Status/Role</th>
                     <th class="text-start">Children/s</th>

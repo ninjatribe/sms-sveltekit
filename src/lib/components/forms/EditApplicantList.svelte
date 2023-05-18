@@ -76,35 +76,35 @@
             <div class="grid grid-cols-2 gap-2">
                 <div class="mb-4">
                     <label class="block mb-2 font-bold text-blue-900">Name:</label>
-                    <input bind:value={completeName} name="firstName" class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100">    
+                    <input bind:value={completeName} name="firstName" class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100" required>    
                 </div>
                 <div class="mb-4">
                     <label for="pending" class="block mb-2 font-bold text-blue-900">Status:</label>
-                    <input bind:value={newPending} placeholder={editPending} class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100">
+                    <input bind:value={newPending} placeholder={editPending} class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100" required>
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-2">
                 <div class="mb-4">
                     <label for="Martial_Status" class="block mb-2 font-bold text-blue-900">Martial Status:</label>
-                    <input bind:value={editMartialStatus} class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100">
+                    <input bind:value={editMartialStatus} class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100" required>
                 </div>
                 <div class="mb-4">
                     <label for="family_role" class="block mb-2 font-bold text-blue-900">Family Role:</label>
-                    <input bind:value={editFamilyRole} class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100">
+                    <input bind:value={editFamilyRole} class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100" required>
                 </div>
             </div>
             <div class="grid grid-cols-3 gap 2">
                 <div class="mb-4">
                     <label for="email" class="block mb-2 font-bold text-blue-900">Email:</label>
-                    <input bind:value={email} class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100">
+                    <input bind:value={email} class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100" required>
                 </div>
                 <div class="mb-4">
                     <label for="inform" class="block mb-2 font-bold text-blue-900">Heard About:</label>
-                    <input bind:value={inform} class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100">
+                    <input bind:value={inform} class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100" required>
                 </div>
                 <div class="mb-4">
                     <label for="ads" class="block mb-2 font-bold text-blue-900">Advertisement:</label>
-                    <input bind:value={ads} class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100">
+                    <input bind:value={ads} class="w-full px-4 py-2 text-gray-700 bg-white border rounded appearance-none focus:outline-none focus:shadow-outline class:active:bg-gray-100 class:focus:outline-none class:focus:bg-gray-100" required>
                 </div>
             </div>
             <div class="p-5">
