@@ -114,11 +114,11 @@
                             {#each paginatedItems as item}
                                 <tr class="border-b">
                                     <td>{item._id.slice(-5)}</td>
-                                    <td>{item.student_firstname} {item.student_lastname}</td>
-                                    <td>{item.student_gender}</td>
-                                    <td>{item.current_grade}</td>
-                                    <td>{item.school_year}</td>
-                                    <td>{item.birth_date}</td>
+                                    <td>{item?.student_firstname || '--'} {item?.student_lastname || '--'}</td>
+                                    <td>{item?.student_gender || '--'}</td>
+                                    <td>{item?.current_grade || '--'}</td>
+                                    <td>{item?.school_year || '--'}</td>
+                                    <td>{item?.birth_date || '--'}</td>
                                     <td class="w-min">
 
                                         <button class="text-center p-1 w-min my-2 bg-green-300 rounded-md" on:click={(e) => {showEditStudentModal = !showEditStudentModal; editId = item._id; editFirstName = item.student_firstname; editLastName = item.student_lastname; editGrade = item.current_grade; editSchoolYear = item.school_year}}>Edit</button>
