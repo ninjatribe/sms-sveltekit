@@ -100,7 +100,7 @@
             <a href="/about" class="hover:text-slate-400 transition-all duration-200 ease-in">About</a>
             <a href="/admissions" class="hover:text-slate-400 transition-all duration-200 ease-in">Admissions</a>
             <a href="/serve" class="hover:text-slate-400 transition-all duration-200 ease-in">Serve</a>
-            <a href="/school_life" class="hover:text-slate-400 transition-all duration-200 ease-in">School Life</a>
+            <a href="/SchoolLife" class="hover:text-slate-400 transition-all duration-200 ease-in">School Life</a>
         </div>
         <div class="flex lg:hidden justify-center items-center w-1/4">
             <Hamburger bind:open/>
@@ -136,7 +136,7 @@
             <p class="w-96 text-blue-900 mt-2 text-xl">Faith Academy is recognized as an international leader in providing a well-rounded educational experience for third-culture kids, located just outside Manila, Philippines.</p>
             <br>
             <a href="/about">
-                <p class= "text-blue-400 hover:text-blue-600 transition-all duration-400 ease-in">LEARN MORE ABOUT US ></p>
+                <p class= "text-blue-400 hover:text-blue-600 transition-all duration-400 ease-in">LEARN MORE ABOUT US</p>
             </a>
         </div>
     </div>
