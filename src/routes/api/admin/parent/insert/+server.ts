@@ -7,7 +7,8 @@ export async function POST({request, locals}: any) {
     const db = await clientPromise();
     const Student = db.collection('applicants');
     data._id = id();
-    
+    data.completeName = `${data.firstName} ${data.lastName}`;
+
     const response = await Student.insertOne(data);
     if(response) {
         return new Response(

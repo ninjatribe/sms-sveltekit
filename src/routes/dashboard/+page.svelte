@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>FARS | Dashboard</title>
+</svelte:head>
 <script>
     // @ts-nocheck
     // import Navbar from "$lib/components/dashboard/Navbar.svelte";
@@ -7,6 +10,7 @@
 	import Gender from "$lib/components/dashboard/Gender.svelte";
 	import SampleComponent from "$lib/components/dashboard/SampleComponent.svelte";
     import StudentList from "$lib/components/dashboard/StudentList.svelte";
+    import ApplicantList from "$lib/components/dashboard/ApplicantList.svelte";
 	// import Records from "$lib/components/dashboard/Records.svelte";
 
     let showDescriptions = true
@@ -26,6 +30,8 @@
                 <Gender/>
             {:else if toDisplay == 'studentlist'}
                 <StudentList/>
+            {:else if toDisplay == 'applicantlist'}
+                <ApplicantList/>
             {:else if toDisplay == 'sample'} 
                 <SampleComponent/> 
             <!-- {:else if toDisplay == 'otherComponents'}  -->
