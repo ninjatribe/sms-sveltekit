@@ -88,15 +88,17 @@
 </script>
     
 <div class="h-full w-full">
-    <div class="flex p-2 w-ful">
-        <div class="flex items-center gap-1">
-            <p>Search: </p>
-            <input type="text" bind:value={search}>
+    <div class="flex w-ful">
+        <div class="items-center w-full">
+            <p class="text-3xl bg-blue-800 mb-5 font-bold text-white p-4">Applicants List</p>
+            <div class="flex float-right">
+                <p class="text-3xl mr-5">Search: </p>
+                <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none" type="text" bind:value={search}>
+            </div>
         </div>
     </div>  
-    <p class="text-3xl font-black p-4">Applicants</p>
     <div>
-        <table class="border-2 border-black bg-white w-full">
+        <table class="border-2 bg-white w-full">
             <colgroup>
                 <col width="20%">
                 <col width="20%">
@@ -104,8 +106,8 @@
                 <col width="15%">
                 <col width="25%">
             </colgroup>
-            <thead class="bg-gray-300 text-md   uppercase">
-                <tr class="bg-black text-white py-2">
+            <thead class="bg-gray-300 text-md uppercase">
+                <tr class="bg-grey-300 py-2">
                     <th class="text-start">Applicant Details</th>
                     <th class="text-start">Status/Role</th>
                     <th class="text-start">Children/s</th>
@@ -140,17 +142,17 @@
                             </td>
                             <td>
                                 {#if item.pending === "Pending"}
-                                <span class="bg-yellow-500 text-black text-xl font-medium mr-2 px-2 py-2 rounded">Pending</span>
+                                <span class="bg-yellow-500 text-black text-md font-medium mr-2 px-2 py-2 rounded">Pending</span>
                                 {:else if item.pending === "Approve"}
-                                <span class="bg-green-500 text-white text-xl font-medium mr-2 px-2 py-2 rounded">Approved</span>
+                                <span class="bg-green-500 text-white text-md font-medium mr-2 px-2 py-2 rounded">Approved</span>
                                 {:else if item.pending === "Declined"}
-                                <span class="bg-red-500 text-white text-xl font-medium mr-2 px-2 py-2 rounded">Declined</span>
+                                <span class="bg-red-500 text-white text-md font-medium mr-2 px-2 py-2 rounded">Declined</span>
                                 {/if}
                             </td>
                             <td class="w-min">
-                                <button class="text-white bg-green-500 hover:bg-green-500 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2" on:click={(e) => {showEditApplicantModal = !showEditApplicantModal; editId = item._id; editMartialStatus = item.martial_status; editFamilyRole = item.family_role; editPending = item.pending; completeName = item.completeName; email = item.email; inform = item.inform; ads = item.ads}}>Edit</button>
-                                <button class="text-white bg-yellow-500 hover:bg-yellow-500 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2" on:click={clickHandler}>Show</button>
-                                <button class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2" on:click={() => {deleteApplicant(item._id)}}>Delete</button>
+                                <button class="text-center p-1 w-min my-2 bg-green-300 rounded-md" on:click={(e) => {showEditApplicantModal = !showEditApplicantModal; editId = item._id; editMartialStatus = item.martial_status; editFamilyRole = item.family_role; editPending = item.pending; completeName = item.completeName; email = item.email; inform = item.inform; ads = item.ads}}>Edit</button>
+                                <button class="text-center p-1 w-min my-2 bg-yellow-300 rounded-md" on:click={clickHandler}>Show</button>
+                                <button class="text-center p-1 w-min my-2 bg-red-300 rounded-md" on:click={() => {deleteApplicant(item._id)}}>Delete</button>
                             </td>
                         </tr>
                         {/each}
