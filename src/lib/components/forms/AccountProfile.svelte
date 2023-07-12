@@ -3,13 +3,11 @@
 
     export let isAccountProfileOpen = false;
     export let data;
-
     
     function toggleProfileForm(){
         isAccountProfileOpen = !isAccountProfileOpen;
     };
     let profile = $page.data.user.profile;
-    
     const settings  = data;
     let firstName = settings?.firstName;
 	let lastName = settings?.lastName;
@@ -18,6 +16,18 @@
     let email = settings?.email;
     let country = settings?.country;
     let message;
+
+    function updateProfileStore() {
+        page.subscribe((value) => {
+            value.data.user.profile.country = country;
+			value.data.user.profile.province = province;
+			value.data.user.profile.email = email;
+			value.data.user.profile.firstname = firstName;
+			value.data.user.profile.lastname = lastName;
+			value.data.user.profile.displayname = `${firstName} ${lastName}`;
+			value.data.user.profile.phone = phone;
+        })
+    }
   </script>
 
 <div class="fixed inset-0 z-1 overflow-y-auto">
@@ -28,13 +38,13 @@
                 class="w-full max-w-lg"
                 on:submit|preventDefault={async () => {
                     try {
-                        let response = await fetch('/api/admin/update', {
+                        toggleProfileForm();
+                        let response = await fetch('/api/admin/profile/update', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
                             },
                             body: JSON.stringify({
-                                profile: profile,
                                 firstName: firstName,
                                 lastName: lastName,
                                 province: province,
@@ -46,6 +56,7 @@
                         });
         
                         let result = await response.json();
+                        updateProfileStore();
                         message = result.message;
                     } catch (error) {
                         console.error('error', error);
@@ -65,7 +76,7 @@
                                 id="grid-first-name" 
                                 type="text" 
                                 placeholder="{profile.firstName}"
-                                bind:value="{profile.firstName}"
+                                bind:value="{firstName}"
                             >
                         </div>
                         <div class="w-full md:w-1/2 px-3">
@@ -78,7 +89,7 @@
                                 id="grid-last-name" 
                                 type="text" 
                                 placeholder="{profile.lastName}"
-                                bind:value="{profile.lastName}"
+                                bind:value="{lastName}"
                             >
                             </div>
                         </div>
@@ -92,7 +103,7 @@
                                 id="grid-email" 
                                 type="text" 
                                 placeholder="{profile.email}"
-                                bind:value="{profile.email}"
+                                bind:value="{email}"
                             >
                         </div>
                         <div class="w-full px-3">
@@ -104,7 +115,7 @@
                                 id="grid-email" 
                                 type="text" 
                                 placeholder="{profile.phone}"
-                                bind:value="{profile.phone}"
+                                bind:value="{phone}"
                             >
                         </div>
                     </div>
@@ -118,7 +129,7 @@
                             id="grid-city" 
                             type="text" 
                             placeholder="{profile.province}"
-                            bind:value="{profile.province}"
+                            bind:value="{province}"
                         >
                         </div>
                         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -130,7 +141,7 @@
                             id="grid-city" 
                             type="text" 
                             placeholder="{profile.country}"
-                            bind:value="{profile.country}"
+                            bind:value="{country}"
                         >
                         </div>
                     </div>

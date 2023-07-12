@@ -2,22 +2,24 @@
     <title>New Student Inquiry</title>
 </svelte:head>
 <script>
+	import AddStudent from '$lib/components/forms/AddStudentForm.svelte';
     // @ts-nocheck
-    import AddStudent from "$lib/components/forms/AddStudent.svelte";
-    import { studentsArray } from './data-store.js';
+    import { studentsArray } from '$lib/utils/stores/Student.js';
 
     let pending = 'Pending';
     let firstName = '', lastName = '', email = '', gender = '', martial_status = '', family_role = '', apply = '', missionary = '', inform = '', ads = '', missionary_message = '', apply_message = '';
 	let isModalOpen = false;
 
+    // @ts-ignore
     const handleModal = (e) => {
         e?.preventDefault();
         isModalOpen = true;
     }
     
+    // @ts-ignore
     async function handleSubmit(event) {
       event?.preventDefault();
-      const response = await fetch('/api/admin/parent/insert', {
+      const response = await fetch('/api/admin/applicant/insert', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
