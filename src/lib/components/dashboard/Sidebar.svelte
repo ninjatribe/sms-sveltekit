@@ -43,6 +43,12 @@
 		/>
 		<HyperLink
 			href="#"
+			buttonName="Student List"
+			img="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+			clickEvent={() => toDisplay = 'studentlist'}
+		/>
+		<HyperLink
+			href="#"
 			buttonName="Payroll"
 			img="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1H1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2H3z"
 			clickEvent={() => toDisplay = 'payroll'}
