@@ -7,7 +7,7 @@
 
 <aside
 	id="logo-sidebar"
-	class=" z-40 w-64 h-full transition-transform hidden sm:block bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+	class="relative w-64 h-screen transition-transform hidden sm:block bg-blue-900 border-r border-gray-200 dark:bg-gray-800 dark:border-ge-700 pt-6"
 	aria-label="Sidebar"
 >
 	{#if HyperLink}

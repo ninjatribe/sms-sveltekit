@@ -19,7 +19,7 @@
     export let toDisplay = 'dashboard';
 </script>
 
-<div class="h-screen">
+<div class="flex flex-col">
     <Navbar /> 
     <div class="flex justify-start h-full bg-blue-500">
         <Sidebar bind:showDescriptions={showDescriptions} bind:toDisplay/>
