@@ -1,395 +1,467 @@
 <div class="about">
-    <head>
-        <script src="https://kit.fontawesome.com/5ffc4a812b.js" crossorigin="anonymous"></script>
-    </head>
+<html lang="en">
+<head>
+    <title>About FAITH ACADEMY</title>
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" >
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+</head>
+<div class="top-image">
+    <img src="top-image1.jpg" alt="">
+</div>
 <body>
-<div class="page">
-  
-   <div class="view">
-        <h1>ABOUT <span>FAITH ACADEMY</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Laudantium, ab quia beatae
-            repellendus quo veritatis dignissimos modi
-            delectus repudiandae est! Lorem ipsum dolor 
-            sit amet consectetur adipisicing elit. Obcaecati
-            totam explicabo soluta veritatis atque voluptatem
-            reiciendis esse ullam minima, excepturi, sequi quam 
-            doloremque quaerat. Dolores velit pariatur, repudiandae 
-            vero et soluta, harum omnis totam rerum deserunt quia rem 
-            debitis repellendus.
-        </p> 
-    </div>
-    <section class="iconic">
-        <a href="#"><i class="fa-regular fa-handshake"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-github"></i></a>
+    <div class="main">
+        <section class="navbar">
+            <ul>
+                <li><a href="#" class="active">ABOUT</a></li>
+                <li><a href="#">HISTORY</a></li>
+                <li><a href="#">SERVE</a></li>
+                <li><a href="#">CALENDAR</a></li>
+                <li><a href="#">FACILITIES</a></li>
+                <li><a href="#">FAQS</a></li>
+            </ul>
         </section>
+   
+    <div class="author">
+        <div class="image-border"></div>
+        <img src="IMG_1186-2-682x1024.jpg" alt="">
+        <div class="content">
+        <h5>MESSAGE FROM THE HEAD OF <br>SCHOOL</h5>
+            <h1>MR. LEIGHTON HELWIG</h1>
+            <br>
+            <p>Then people visit Faith Academy, 
+            they often comment about our amazing
+            facilities.It is true, God has blessed
+            our school with a wonderfulcampus.The
+            facilities,however, simply reflect the 
+            well-rounded education we provide our
+            students. It is through these facilities
+            that our teachers and staff provide an excellent
+            education that fosters spirit ...
+            
 
-<figure class="text">
-<section class="top">
-    <img class="logo" src="/1.webp" alt="none">
-</section>
-<figure class="max-w-screen-md mx-auto text-center">
-    <blockquote>
-        <p class="text-2xl italic font-medium text-white-900 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est et accusamus omnis deleniti repudiandae soluta aliquid saepe illo aut.</p>
-    </blockquote>
-    <figcaption class="flex items-center justify-center mt-6 space-x-3">
-        <!-- svelte-ignore a11y-img-redundant-alt -->
-        <img class="w-10 h-10 rounded-full" src="profile.jpg" alt="profile picture">
-        <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-            <cite class="pr-3 font-medium text-white-900 text-white">Micheal Avinash</cite>
-            <cite class="pl-3 text-sm text-white-500 text-blue-100">HEAD at faith Academy</cite>
-        </div>
-    </figcaption>
-</figure>
-</figure>
-<section class="parag">
-            <section class="pic">
-                <img src="/23.jpg" width="500px" height="200px" alt="">
-                <div class="serve">
-                <h2>MISSION</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Deserunt officia similique, assumenda dignissimos 
-                    molestiae minima? Voluptatibus, inventore consequuntur.<br>
-                    Doloribus, quam!.Lorem ipsum dolor sit amet 
-                    consectetur adipisicing elit. Quibusdam, ad?<br>
-                    Laboriosam dolores natus voluptatibus dolore 
-                    praesentium, quod ullam incidunt id impedit 
-                    officiis deserunt inventore temporibus, assumenda 
-                    adipisci pariatur reiciendis quaerat.</p>
-                <span id="dots"></span>
+            <span id="dots"></span>
                 <div id="more">
-                <span>VISION</span>
-                <p>Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. Maiores aliquid harum
-                    vel? Delectus provident quo rep ellendus
-                    nam, ratione, ex cumqueipsa quas earum<br>
-                    aperiam tempora odio nobis deleniti sint
-                    libero, asperiores voluptatibus eaque aliquid
-                    similique facere expedita eos. Nihil ut debitis
-                    in eum totam officiis non dolores accusamus illo.<br>
-                    Delectus?</p>
-                </div>
-
-                       <button on:click={readmore} id="btn" >Read more</button>
+                <p> 
+                    academic, creative, and  physical growth in a rapidly changing world.
+                    It is our goal to use our school to provide opportunities
+                    for students to grow into young adults who 
+                    better understand how God made them.</p>
             </div>
-        </section>
-
-        <section class="container">
-            <div class="header">
-                <h5>CORE VALUES</h5>
-            </div>
-            <div class="sub-container">
-            <div class="teams">
-                <img src="global.png" alt="">
-                <div class="name">GREAT COMMISSION PARTNERSHIP</div>
-                <div class="par">Lorem ipsum dolor sit amet consectetur
-                     adipisicing elit. Numquam nobis ut asperiores aspernatur.
-                      Neque minima iure dolor, magnam fugiat quas?</div>
-    
-                <div class="social-links">
-                    <a href="#"><i class="fa-regular fa-handshake"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-github"></i></a>
-                </div>
-            </div>
-    
-            <div class="teams">
-                <img src="education.png" alt="">
-                <div class="name">EXCELLENCE IN EDUCATION</div>
-                <div class="par">Lorem ipsum dolor sit amet consectetur
-                     adipisicing elit. Numquam nobis ut asperiores aspernatur.
-                      Neque minima iure dolor, magnam fugiat quas?</div>
-    
-                <div class="social-links">
-                    <a href="#"><i class="fa-regular fa-handshake"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-github"></i></a>
-                </div>
-            </div>
+            <button on:click={readmore} id="btn">+ Read more</button>
+    </div>
+    <script>
+        // @ts-nocheck
         
-            <div class="teams">
-                <img src="com.jpg" alt="">
-                <div class="name">MULTICULTURAL COMMUNITY</div>
-                <div class="par">Lorem ipsum dolor sit amet consectetur
-                     adipisicing elit. Numquam nobis ut asperiores aspernatur.
-                      Neque minima iure dolor, magnam fugiat quas?</div>
-    
-                <div class="social-links">
-                    <a href="#"><i class="fa-regular fa-handshake"></i></a>
-                    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-github"></i></a>
-                </div>
-            </section>
+            function readmore() {
+                var dots = document.getElementById("dots");
+                var moretext = document.getElementById("more")
+                var btn = document.getElementById("btn");
+        
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btn.innerHTML = "+ Read more";
+                    moretext.style.display = "none";
+                }else {
+                    dots.style.display = "none";
+                    btn.innerHTML ="- Read less";
+                    moretext.style.display = 'inline';
+        
+                }
+        
+            }
+        
+    </script>
+</div>
+
+<div class="mv">
+    <div class="column1">
+        <div class="mission">
+        <h1>Mission</h1>
+        <p>FORMING CHRISTLIKE, LIFELONG LEARNERS<br>
+            THROUGH A DYNAMIC, RELEVANT EDUCATION, ESPECIALLY<br>
+            FOR THE CHILDREN OF MISSIONARIES SERVING IN ASIA</p>
+    </div>
+</div>
+    <div class="column1">
+        <div class="vission">
+        <h1>Vission</h1>
+        <p>TO SEE GOD’S KINGDOM AND THE GREAT COMMISSION<br>
+            ADVANCED THROUGH TRANSFORMATIVE, CHRIST-CENTERED<br>
+            EDUCATION</p>
+    </div>
+</div>
+</div>
+<div class="bt">
+    <p>It is our goal to offer rich opportunities 
+        for learning and growth inside and outside
+        the classroom, to train students to think
+        biblically about every aspect of life, to 
+        instill a sense of honor and respect for people
+        of all cultural backgrounds, and to disciple
+        and empower our students to impact the world
+        around them for the Gospel. Students of 
+        missionary families, international businesspeople,
+        diplomats, and Philippine nationals are all welcomed.<br>
+        
+    <strong>+ Read our Statement of Faith </strong></p>
+</div>
+<section class="ocv">
+<h6>Our Core Values</h6>
+</section>
+<section class="core">
+    <div class="columns">
+        <div class="values">
+            <img src="c1.png" alt="">
+            <h6>GREAT COMMISSION<br>PARTNERSHIP</h6>
+            <p>WE ARE PASSIONATE ABOUT<br> 
+                PARTICIPATING IN THE GREAT<br>
+                COMMISSION</p>
         </div>
-    </body>
+    </div>
+    <div class="columns">
+        <div class="values">
+            <img src="c2.png" alt="">
+            <h6>EXCELLENCE IN<br>EDUCATION</h6>
+            <p>WE ARE COMITTED TO BEST<br> 
+                PRACTICES IN EDUCATION</p>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="values">
+            <img src="c3.png" alt="">
+            <h6>MULTICULTURAL<br>COMMUNITY</h6>
+            <p>WE ARE A VIBRANT,<br> 
+                MULTICULTURAL COMMUNITY<br>
+                BOUND TOGETHER BY<br>
+                CHRISTIAN LOVE</p>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="values">
+            <img src="c4.png" alt="">
+            <h6>GOSPEL INTEGRATION</h6>
+            <p>WE ARE DEDICATED TO<br> 
+                SEEING THE GOSPEL <br>
+                PERMEATE EVERYTHING WE<br>
+                DO, IN AND OUT OF THE<br>
+                CLASSROOM</p>
+        </div>
+    </div>
+</section>
+<div class="endborder">
+    <p>As a member of the Child Safety Protection Network,  Faith Academy
+        is committed to every student’s safety. All faculty and staff are
+        provided mandatory ongoing child safety training so that they are 
+        able to prevent incidents as well as recognize and effectively 
+        report any indicators of abuse. Our Child Safety Team is dedicated 
+        to responding to and resolving all cases so that all involved may
+        find help and healing.</p>
+
+        <button class="text">+ Contact the CST</button>
+
+</div>
+</body>
+</html>
 </div>
 
 
 
-<script>
-// @ts-nocheck
-
-    function readmore(){
-        var dots = document.getElementById("dots");
-        var moretext = document.getElementById("more")
-        var btn = document.getElementById("btn");
-
-        if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btn.innerHTML = "Read more";
-            moretext.style.display = "none";
-        }else {
-            dots.style.display = "none";
-            btn.innerHTML ="Read less";
-            moretext.style.display = 'inline';
-
-        }
-
-    }
-
-</script>
-
-
-
 <style>
-    .view {
-        text-align: center;
-        position: block;
-        background-image: url('skyblue.jpg');
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 300px;
-        opacity: 95%;
-        background-size: cover;
-    }
-    .page .view p{
-        font-size: 15px;
-        color: #ddd;
-        margin-bottom: 100px;
-        display: block;
-        text-shadow: #173459 1px 0 10px;
-        padding: 50px;
+    .about {
+        margin: none;
 
-    }
-    .iconic{
-        color: #1454bb;
-        justify-content: center;
-        display: flex;
-        position: relative;
-        padding-bottom: 10px;
-
-        
-    }
-    .iconic a{
-        margin: 10px;
-       
     }
     body {
-        width: 100%;
+        border: none;
+        position: absolute;
+        height: 200vh;
     }
-    .parag {
-        margin: 50px;
-        box-shadow: 30px 30px 20px rgb(0, 0, 0,0.3);
+    .main {
+        background-color: white;
+        background-size: cover;
+        height: 285vh;
+        width: 205vh;
+    }
+    .top-image img{
+        max-width: 100%;
+        max-height: 800px;
+        position: fixed;
+
 
     }
-    .text {
-        background-color: #1c59bb;
-        border-radius: 20px;
-        margin-left: 200px;
-        margin-right: 200px;
-        box-shadow: 30px 30px 20px rgb(0, 0, 0,0.3);
-        background-size: 500vh;
+    .navbar {
+        background-image: linear-gradient(to left,rgb(3, 3, 39), #174fa9 ,skyblue);
+        color: aliceblue;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding: 5px;
+        margin-top: 30vh;
+        text-shadow: #00060d 1px 0 10px;
     }
-    .header h5 {
-        font-size: larger;
-        font-weight: bold;
-        background-color: #1454bb;
-        border-radius: 10px;
-        box-shadow: 30px 30px 20px rgb(0, 0, 0,0.3);
-        width: auto;
-        color: #ddd;
-        padding: 10px;
+    .navbar .active{
+        color: #00dbde;
+    }
+    .navbar ul{
+        margin: 10px ;
+        text-align: center;
+        align-items: center;
+        display:flex ;
+        justify-content: center;
+
+    }
+    .navbar ul li a{
+        margin: 20px;
+        cursor: pointer;
+        color: rgb(201, 200, 200);
         
     }
-    .page {
-        justify-content: flex-start;
+    .navbar ul li a:hover{
+        color: white;
+        transition-duration: 0s;
 
     }
-    .page p{
-        color: #210303;
-    }
-    .serve {
-        margin-left: 120px;
+    .author {
+        justify-content: center;
+        display: flex;
+        margin-top: 100px;
+        margin-right: 50vh;
+        margin-left: 50vh;
+       
+        
     }
 
-    .parag {
-        text-align: center;
+    .image-border {
+        z-index: 1;
+        background-color: transparent;
+        width: 120vh;
+        height: 420px;
+        border: 4px solid rgb(17, 91, 210);
     }
-    .about body{
-        font-size: 20px;
-        text-align: center;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        padding-top: 5px;  
-    }
-    .top {
-        width: 50px;
-        height: 50px;
+    .author img{
+        z-index: 2;
+        width: 290px;
+        height: auto;
         position: absolute;
-        margin: 10px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-right:70vh ;
     }
-    .page h1 {
+    .content {
+        margin-top: 20px;
+        margin-right: 50px;
+        margin-left: 50px;
+
+    }
+    .content p{
+        margin-right: 100px;
+        padding-right: 80px;
+        word-break: break-all;
+        color: #174fa9;
+    }
+    .content h5{
+        color: #174fa9;
+        font-family: 'Anton', sans-serif;
         font-size: 30px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        text-align: center;
-        color: #ffff;
-        padding: 5px;
-        background-image:linear-gradient(to left,black,blue,rgb(87, 182, 219));
         font-weight: bold;
-        text-shadow: #173459 1px 0 10px;
 
     }
-    .page p {
-        font-size: 15px;
+    .content h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
     }
-    .pic {
-        background-image: linear-gradient(#1454bb,rgb(56, 134, 165));
-
+    .content button{
         display: flex;
-        align-items: center;
-        width: auto;
-        margin: auto;
-        padding:20px;
-    }
-    .pic p{
-        color: beige;
-        padding: 10px;
-        font-size: small;
-        display: flex;
-    }
-    .pic img{
-        border-image: none;
-        flex: 0 50%;
-        max-width: 300px;
-        height: 300px;
-        border-radius: 100%;
-        border: 3px solid whitesmoke;
-        padding: 10px;
-    }
-    P {
-        font-size: 15px;
-        padding: 50px;
-    }
-    .serve button{
-        display: flex;
-        border: 2px solid #ffff;
         display: inline-block;
-        outline: none;
-        padding: 5px 10px;
+        padding: 4px 10px;
         border-radius: 10px;
         font-size: 15px;
-
+        background-image: linear-gradient(to left, #174fa9,rgb(95, 177, 210)) ;
+        box-shadow: 30px 30px 20px rgb(0, 0, 0,0.3);
         color: #ffff;
         height: 40px;
         cursor: pointer;
     }
-    .serve button:hover {
+    .content button:hover {
         color: skyblue;
-        transition: .4s;
     }
-    .serve h2 {
-        color: white;
-        font-size: 30px;
-        outline: 1px white;
-    }
-
     #more {
         display: none;
-
     }
-    .serve p {
-        color: beige;
-        padding: 10px;
-        font-size: small;
-        display: flex;
-    }
-    .page span{
-        color: rgb(107, 194, 237);
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 12px;
-        
-    }
-    .serve span{
-        font-size: 30px;
-        font-style: oblique;
-        color: #ffff;
-    }
-    .container {
-        text-align: center;
-        color: #f0e7e7;
-        font-size: 15px;
-        margin-left: 120px;
-        line-height: 20px;
-        align-items: center;
-    }
-    .header {
-        padding-top: 60px;
-        color: #444;
-        font-size: 20px;
-        margin:auto;
-        line-height: 50px;
-    }
-    .sub-container {
-        max-width: 1200px;
-        margin:auto;
-        padding: 48px 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
     
-    }
-    .teams {
-        margin: 10px;
-        padding: 22px;
-        max-width: 30%;
-        transition: 0.4s;
-        box-sizing: border-box;
-        background-image: -webkit-linear-gradient(skyblue,#1454bb,black);
-        border-radius: 10px;
-        box-shadow: 30px 30px 20px rgb(0, 0, 0,0.3);
-    }
-    .teams img {
-        width: 200px;
-        height: 200px;
-        border-radius: 100%;
-        border: 5px solid #ddd;
-        margin: auto;
+    .mv {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
 
     }
+    .mv .column1 {
+        margin: 50px;
+        border: 2px solid #174fa9;
+    }
+    .mv .column1 h1{
+        font-family: 'Kaushan Script', cursive;
+        color: #174fa9;
+        font-size: 50px;
 
-    .name {
-        padding: 12px;
+
+    }
+    .mv .column1 p{
+        font-size: 15px;
+        color: #174fa9;
         font-weight: bold;
-        font-size: 16px;
-        text-transform: uppercase;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 30px;
     }
-    .social-links{
-        margin: 10px;
+    .bt {
+        margin-top: 10vh;
+        background-image: url(blue1.jpg);
+        width: 100%;
+        height: 40vh;
+    }
+    .bt p{
+        color: #eef1f5;
+        text-shadow: #020913 1px 0 10px;
+        text-align: center;
+        padding: 100px 30vh 30vh;
+        word-break: break-all;
+    }
+    .ocv {
+        transform: transalte(-50%,50%);
+    }
+    .ocv h6 {
+        background: linear-gradient(90deg,#00dbde,#174fa9,rgb(117, 57, 220));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #dbe0e8;
+        margin-top: 5vh;
+        font-size: 8vh;
+        font-family: 'Oleo Script', cursive;
+        text-align: center;
+    }
+    .core {
+        margin-top: 100px;
         display: flex;
         justify-content: center;
     }
-    .social-links a{
-        display: inline-block;
-        height: 30px;
-        width: 30px;
+    .core .columns {
+        margin-top: none;
+        margin-right: 30px;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        text-align: center;
     }
-   
-    .social-links a i{
-        color: #f8f0f0;
+    .core .values img{
+        margin: auto;
+        width: auto;
+        height: 150px;
+        object-fit: cover;
     }
-   
+    .core .values h6{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color: #174fa9;
+        margin-top: 20px;
+    }
+    .core .values p{
+        padding-top: 10px;
+        font-size: 11px;
+    }
+    .endborder {
+        background-image: linear-gradient(to left,#174fa9,rgb(18, 18, 18),#174fa9);
+        text-align: center;
+        height: 50vh;
+    }
+    .endborder p {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-shadow: #010b18 1px 0 10px;
+        color: #dbe0e8;
+        padding-top:150px;
+        margin-top: 30px;
+    }
+    .endborder button{
+        color: #1160de;
+        font-weight: bold;
+        background: transparent;
+        border: none;
+        margin: 20px;
+    }
+    .endborder button:hover{
+        color: #33aad5;
+
+    }
+    @media screen and (max-width: 1000px) {
+        body .main{
+            width: 102vh;
+            background-size: cover;
+            
+        }
+        body .author {
+        margin-top: 50px;
+        margin-right: 100px;
+        margin-left: 100px;
+        
+        }
+        body .author .content{
+        margin-top: 30px;
+        margin-right: none;
+        margin-left: 50px;
+        }
+        body .image-border {
+        z-index: 1;
+        background-color: transparent;
+        width: 165vh;
+        height: 365px;
+        margin-top: 20px;
+        margin-left: 45px;
+        border: 4px solid rgb(17, 91, 210);
+       }
+       body .author img{
+        z-index: 2;
+        width: 30vh;
+        height: auto;
+        position: absolute;
+        padding: 20px;
+        margin-left:29vh;
+       }
+       .core {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+    }
+        .core .columns {
+        margin-top: none;
+        margin-right: 30px;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .core .values img{
+        margin: auto;
+        width: auto;
+        height: 120px;
+        object-fit: cover;
+    }
+    .bt p{
+        color: #eef1f5;
+        text-shadow: #020913 1px 0 10px;
+        text-align: center;
+        padding: 100px 30px 30px;
+        word-break: break-all;
+    }
+       .endborder p {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-shadow: #010b18 1px 0 10px;
+        color: #dbe0e8;
+        padding-top:150px;
+        margin: 50px 50px 5px ;
+        word-break: break-all;
+       }
+       .content {
+        margin: 20px auto auto ;
+
+       } }
 </style>
