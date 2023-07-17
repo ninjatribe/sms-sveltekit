@@ -1,42 +1,43 @@
+<svelte:head>
+    <title>FARS | Dashboard</title>
+</svelte:head>
 <script>
     // @ts-nocheck
+    // import Navbar from "$lib/components/dashboard/Navbar.svelte";
 	import Navbar from "$lib/components/forms/Navbar.svelte";
-    import Sidebar from "$lib/components/Sidebar.svelte";
+    import Sidebar from "$lib/components/dashboard/Sidebar.svelte";
+	import Dashboard from "$lib/components/dashboard/Dashboard.svelte";
+	import Gender from "$lib/components/dashboard/Gender.svelte";
+	import SampleComponent from "$lib/components/dashboard/SampleComponent.svelte";
+    import StudentList from "$lib/components/dashboard/StudentList.svelte";
+    import ApplicantList from "$lib/components/dashboard/ApplicantList.svelte";
+	// import Records from "$lib/components/dashboard/Records.svelte";
 
     let showDescriptions = true
-</script>
-<div class="sm:h-screen flex flex-col sm:flex-row">
-    <div class="animation duration-300 truncate h-full p-0 sm:p-1 hidden sm:inline {showDescriptions ?  'w-1/2' : 'w-48'}">
-        <Sidebar bind:showDescriptions={showDescriptions} />
-    </div>
 
-    
-    <div>
-        <Navbar />
-        <div class="grid grid-cols-3 bg-red-500 h-full w-full p-2 gap-2 place-items-center ">
-            <div class="bg-blue-500 border-2 border-black">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dolorem blanditiis delectus quos alias totam deserunt, necessitatibus labore quia voluptate optio fugit, expedita accusamus illo veritatis? Consequatur a blanditiis aperiam!
-            </div>
-            <div class="bg-blue-500">
-                These color designs are only for testing purposes
-            </div>
-            <div class="bg-blue-500">
-                So we can see whats happening with the border/overflows
-            </div>
-            <div class="bg-blue-500 col-span-3">
-                Im wide btw
-                <br>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero quia assumenda nulla alias aperiam magnam soluta accusamus quidem consequatur commodi autem ratione repellendus sit ex, illo dolores corrupti velit ipsa!
-            </div>
-            <div class="bg-blue-500">
-                5
-            </div>
-            <div class="bg-blue-500">
-                I dont know the theme yet so this should look bad.
-            </div>
-            <div class="bg-blue-500">
-                7
-            </div>
+    // Sidebar click changes this
+    export let toDisplay = 'dashboard';
+</script>
+
+<div class="flex flex-col">
+    <Navbar /> 
+    <div class="flex justify-start h-full bg-blue-500">
+        <Sidebar bind:showDescriptions={showDescriptions} bind:toDisplay/>
+        <div class="w-full  ">
+            {#if toDisplay == 'dashboard'}
+                <Dashboard/>
+            {:else if toDisplay == 'gender'} 
+                <Gender/>
+            {:else if toDisplay == 'studentlist'}
+                <StudentList/>
+            {:else if toDisplay == 'applicantlist'}
+                <ApplicantList/>
+            {:else if toDisplay == 'sample'} 
+                <SampleComponent/> 
+            <!-- {:else if toDisplay == 'otherComponents'}  -->
+            <!-- To add another component in sidebar, go to /lib/components/dashboard/Sidebar.svelte and add. -->
+            {/if}
         </div>
+        
     </div>
 </div>

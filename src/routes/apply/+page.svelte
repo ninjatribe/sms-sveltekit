@@ -1,6 +1,7 @@
 <script>
     import headerImg from "$lib/images/header.jpg"
-    import Navbar from "$lib/components/forms/Navbar.svelte";
+    import Navbar from "$lib/components/home/Navbar.svelte";
+    import Footer from "$lib/components/Footer.svelte";
     import arrowRight from "$lib/images/arrow_right.svg";
     import mailImg from "$lib/images/mail.svg";
 	import { onMount } from "svelte/internal";
@@ -176,8 +177,9 @@
                     <p> REGISTRAR@FAITH.EDU.PH</p>
                 </a>
             </div>
-            <p class="font-bold mt-4">Already started an application or looking for re-enrollment? <a href="#top" class="text-blue-300 hover:text-blue-500 font-bold {hoverBase}">Login here.</a></p>
+            <p class="font-bold mt-4">Already started an application or looking for re-enrollment? <a href="/auth/login" class="text-blue-300 hover:text-blue-500 font-bold {hoverBase}">Login here.</a></p>
         </div>
     </div>
 
 </div>
+<Footer></Footer>
