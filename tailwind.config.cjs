@@ -51,10 +51,10 @@ module.exports = {
 				gallop: 'rightToLeft 1.5s linear'
 			},
 			fontFamily: {
-				kaushan : ['Kaushan Script', "cursive"],
+				kaushan: ['Kaushan Script', 'cursive'],
 				quicksand: ['Quicksand', 'sans-serif'],
-				bebas : ['Bebas Neue', "cursive"],
-				racing : ['Racing Sans One', "cursive"],
+				bebas: ['Bebas Neue', 'cursive'],
+				racing: ['Racing Sans One', 'cursive']
 			}
 		},
 		backgroundImage: {

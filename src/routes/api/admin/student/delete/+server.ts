@@ -6,9 +6,7 @@ export async function POST({ request, locals }: any) {
 	const db = await clientPromise();
 	const students = db.collection('students');
 
-    const response = await students.deleteOne(
-        { _id: data._id }, 
-    );
+	const response = await students.deleteOne({ _id: data._id });
 
 	if (response) {
 		return new Response(

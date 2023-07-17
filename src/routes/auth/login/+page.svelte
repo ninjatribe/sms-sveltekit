@@ -94,7 +94,12 @@
 								>
 									<p class="mb-4">Please login to your account</p>
 									<InputCred label="Email" name="email" type="email" bind:value={email} />
-									<InputCred label="Password" name="password" type="password" bind:value={password} />
+									<InputCred
+										label="Password"
+										name="password"
+										type="password"
+										bind:value={password}
+									/>
 									<div class="mb-12 pt-1 pb-1 text-center">
 										<ButtonGradient type={'submit'}>Login</ButtonGradient>
 										<a href="#!">Forgot password?</a>

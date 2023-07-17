@@ -1,5 +1,5 @@
 <script>
-    // @ts-nocheck
+	// @ts-nocheck
 	export let classes = 'w-10 h-10';
 </script>
 

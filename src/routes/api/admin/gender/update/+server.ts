@@ -6,13 +6,15 @@ export async function POST({ request, locals }: any) {
 	const db = await clientPromise();
 	const gender = db.collection('genders');
 
-    const response = await gender.updateOne(
-        { _id: data._id }, 
-        { $set: {
-            gender: data.gender,
-            description: data.description
-        }}
-    );
+	const response = await gender.updateOne(
+		{ _id: data._id },
+		{
+			$set: {
+				gender: data.gender,
+				description: data.description
+			}
+		}
+	);
 	if (response) {
 		return new Response(
 			JSON.stringify({

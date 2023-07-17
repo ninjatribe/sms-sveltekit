@@ -6,9 +6,7 @@ export async function POST({ request, locals }: any) {
 	const db = await clientPromise();
 	const gender = db.collection('genders');
 
-    const response = await gender.deleteOne(
-        { _id: data._id }, 
-    );
+	const response = await gender.deleteOne({ _id: data._id });
 
 	if (response) {
 		return new Response(

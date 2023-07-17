@@ -8,8 +8,6 @@
 ? Lean on Tailwind to do the heavy lifting.
 */
 
-
-
 @layer base {
 	html {
 		font-family: 'NUNITO', sans-serif;
@@ -22,7 +20,7 @@
 		width: 10px;
 		border-radius: 100vh;
 	}
-	
+
 	/* Track */
 	::-webkit-scrollbar-track {
 		background: #1b355e;

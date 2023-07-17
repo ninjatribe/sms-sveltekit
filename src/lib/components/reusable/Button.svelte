@@ -2,9 +2,9 @@
 	// @ts-nocheck
 	export let type = 'button';
 	export let extraClasses = '';
-    export let textColor = 'text-neutral-500';
-    export let textColorHover = 'text-white';
-    export let bgColor = 'bg-white';
+	export let textColor = 'text-neutral-500';
+	export let textColorHover = 'text-white';
+	export let bgColor = 'bg-white';
 	export let bgColorHover = 'bg-blue-500';
 	export let borderColor = 'border-neutral-500';
 	export let borderColorHover = 'border-blue-500';
